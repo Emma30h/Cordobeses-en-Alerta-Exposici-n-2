@@ -500,7 +500,7 @@ body.doc .vnote{margin-left:0;font-size:16px}
   <div class="inst" data-a>Policía de la Provincia de Córdoba · Ministerio de Seguridad</div>
   <div class="badge" data-a>Base Olimpo · 8 frecuencias RugGear</div>
   <h1 data-a>División<br><span class="hl">de Frecuencia</span></h1>
-  <p class="lead" data-a>Cómo se reparte la ciudad en 8 frecuencias y cómo se carga un hecho en el SAE WEB para irradiarlo a la que corresponde.</p>
+  <p class="lead" data-a>Cómo se reparte la ciudad en 8 frecuencias según la UT y cómo figuran en el RugGear.</p>
   <div class="meta" data-a><span>Dirección Monitoreo Cordobeses en Alerta</span><span>Córdoba Capital</span><span>Noviembre 2026</span></div>
   <div class="qrbox" data-a><div class="qrimg" id="qr"><small>El QR aparece al publicar la presentación</small></div><div class="qrtxt"><b>Seguí la exposición en tu celular</b>Escaneá el código: la guía avanza junto con las láminas.<code id="qrUrl"></code></div></div>
 </section>
@@ -541,23 +541,7 @@ body.doc .vnote{margin-left:0;font-size:16px}
   </div>
 </section>
 
-<!-- 4 · RÉPLICA SAE · EJEMPLO 1 -->
-<section class="slide s-sae" data-id="sae-norte1" data-case="1">
-  <div class="kicker" data-a>Así se carga · ejemplo 1</div>
-  <h2 data-a>Un hecho en la UT 15 se irradia a NORTE 1</h2>
-  <div class="sae-host"></div>
-  <div class="fict">Réplica del SAE WEB · caso ficticio con fines de capacitación</div>
-</section>
-
-<!-- 5 · RÉPLICA SAE · EJEMPLO 2 -->
-<section class="slide s-sae" data-id="sae-norte2" data-case="2">
-  <div class="kicker" data-a>Así se carga · ejemplo 2</div>
-  <h2 data-a>Un hecho en la UT 14 se irradia a NORTE 2</h2>
-  <div class="sae-host"></div>
-  <div class="fict">Réplica del SAE WEB · caso ficticio con fines de capacitación</div>
-</section>
-
-<!-- 6 · GRACIAS: el mapa recorre las 8 frecuencias -->
+<!-- 4 · GRACIAS: el mapa recorre las 8 frecuencias -->
 <section class="slide fin" data-id="gracias">
   <div>
     <div class="eye" data-a><i></i><i></i><i></i><img src="media/logo_ojo.png" alt="Logo Cordobeses en Alerta"></div>
@@ -565,7 +549,7 @@ body.doc .vnote{margin-left:0;font-size:16px}
     <div class="rule" data-a></div>
     <div class="dir" data-a><span>Dirección Monitoreo</span>Cordobeses en Alerta</div>
     <div class="pol" data-a>Policía de la Provincia de Córdoba · Ministerio de Seguridad</div>
-    <a class="descarga" data-a href="Division%20de%20Frecuencia%20-%20Carga%20en%20el%20SAE%20WEB.pdf" download="Division de Frecuencia - Carga en el SAE WEB.pdf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span><span><b>Descargar el material</b><small>PDF · para guardar o compartir</small></span></a>
+    <a class="descarga" data-a href="Division%20de%20Frecuencia%20-%20Frecuencias%20RugGear.pdf" download="Division de Frecuencia - Frecuencias RugGear.pdf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span><span><b>Descargar el material</b><small>PDF · para guardar o compartir</small></span></a>
   </div>
   <div data-a>
     <svg class="frecmap fin-map" aria-hidden="true"></svg>
@@ -1060,7 +1044,7 @@ const HOOKS={};
   /* ================= guía en vivo (expositor) ================= */
   (function(){
     const C=window.VIVO, panel=document.getElementById('vivoPanel'), chip=document.getElementById('vivoChip'), txt=document.getElementById('vivoTxt'), msg=document.getElementById('vivoMsg');
-    const VER='2026-11-03c';   // misma versión que guia.html
+    const VER='2026-11-03d';   // misma versión que guia.html
     let key=null, ch=null, ready=false, last=[1,0];
     const b64u=b=>btoa(String.fromCharCode(...new Uint8Array(b))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
     const store={get(){try{return localStorage.getItem('vivoClaveFrecuencia')}catch(e){return null}},set(v){try{v?localStorage.setItem('vivoClaveFrecuencia',v):localStorage.removeItem('vivoClaveFrecuencia')}catch(e){}}};

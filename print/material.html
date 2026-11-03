@@ -144,21 +144,16 @@ ol.pts.a li::before{background:var(--signal)}
   <div class="kick">Dirección Monitoreo Cordobeses en Alerta</div>
   <div class="badge">Material de la exposición</div>
   <h1>División<br><span>de Frecuencia</span></h1>
-  <p class="lead">Cómo se reparte la ciudad en 8 frecuencias RugGear según la UT, y cómo se carga un hecho en el SAE WEB para irradiarlo a la frecuencia que corresponde.</p>
+  <p class="lead">Cómo se reparte la ciudad en 8 frecuencias RugGear según la UT, cómo figuran en el RugGear y a qué canal se irradia cada hecho.</p>
 
-  <div class="indice" style="grid-template-columns:repeat(3,1fr)">
-    <div class="panel"><i>01</i><b>Las 8 frecuencias</b><small>La UT del hecho define a cuál se irradia.</small></div>
-    <div class="panel"><i>02</i><b>El RugGear</b><small>Cada frecuencia es un canal de personal tech.</small></div>
-    <div class="panel"><i>03</i><b>Carga en el SAE WEB</b><small>Dos hechos de ejemplo, paso a paso.</small></div>
-  </div>
 
   <div class="flujo panel">
     <div class="kick">La idea en tres pasos</div>
-    <h3>De la carta en el SAE WEB a la frecuencia correcta</h3>
+    <h3>De la UT del hecho al canal correcto</h3>
     <div class="flow c3">
-      <div class="st"><span class="c"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4M7 9h6M7 12h10"/></svg></span><em>SAE WEB</em><b>Se carga el hecho con la calle y la altura</b></div>
-      <div class="st"><span class="c"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><em>Comuna</em><b>El sistema muestra la UT del hecho</b></div>
-      <div class="st end"><span class="c"><svg viewBox="0 0 24 24"><rect x="7" y="6" width="10" height="16" rx="2"/><path d="M10 6V2M10 11h4M10 14h4"/><path d="M19 5a6 6 0 0 1 0 8"/></svg></span><em>RugGear</em><b>Se irradia a la frecuencia de esa UT</b></div>
+      <div class="st"><span class="c"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><em>UT</em><b>El hecho tiene su UT (en el SAE WEB, Comuna)</b></div>
+      <div class="st"><span class="c"><svg viewBox="0 0 24 24"><path d="M4 12h4l3-7 4 14 3-7h2"/></svg></span><em>Frecuencia</em><b>Cada UT pertenece a una de las 8 frecuencias</b></div>
+      <div class="st end"><span class="c"><svg viewBox="0 0 24 24"><rect x="7" y="6" width="10" height="16" rx="2"/><path d="M10 6V2M10 11h4M10 14h4"/><path d="M19 5a6 6 0 0 1 0 8"/></svg></span><em>RugGear</em><b>Se irradia por el canal de esa frecuencia</b></div>
     </div>
     <div class="ejemplo">
       <div><small>Comuna</small><b>DISTRITO 15</b></div><i>→</i>
@@ -167,7 +162,15 @@ ol.pts.a li::before{background:var(--signal)}
     </div>
   </div>
 
-  <div class="pie"><span>Policía de la Provincia de Córdoba · Ministerio de Seguridad</span><span>1 / 3</span></div>
+  <div class="cierre panel">
+    <div>
+      <h3>La presentación completa</h3>
+      <p>Escaneá el código para volver a ver la exposición, con el mapa animado y la réplica del RugGear.</p>
+      <code>cordobeses-en-alerta-exposicion-2.vercel.app</code>
+    </div>
+    <img src="img/qr.jpg" alt="Código QR de la presentación">
+  </div>
+  <div class="pie"><span>Policía de la Provincia de Córdoba · Ministerio de Seguridad</span><span>1 / 2</span></div>
 </section>
 
 <!-- ============ 2 · FRECUENCIAS ============ -->
@@ -204,38 +207,7 @@ ol.pts.a li::before{background:var(--signal)}
       </ol>
     </div>
   </div>
-  <div class="pie"><span>Policía de la Provincia de Córdoba · Ministerio de Seguridad</span><span>2 / 3</span></div>
-</section>
-
-<!-- ============ 4 · SAE WEB ============ -->
-<section class="page">
-  <div class="mini"><img src="img/logo_ojo_oscuro.png" alt=""><span>División de Frecuencia</span><span>03 · Carga en el SAE WEB</span></div>
-  <div>
-    <div class="kick">Así se carga</div>
-    <h2>Un hecho de ejemplo en el SAE WEB</h2>
-    <p class="lead2">Réplica con datos ficticios, con fines de capacitación.</p>
-  </div>
-  <img class="sae" src="img/sae.jpg" alt="Réplica del SAE WEB con un hecho de ejemplo en la UT 15">
-  <ol class="pts">
-    <li><b>Teléfono</b> del vecino.</li>
-    <li><b>Calle con la altura</b>: el sistema completa solo la geolocalización, la cuadrícula, la comisaría y la comuna.</li>
-    <li>En <b>Comuna</b> aparece la UT del hecho: <b>DISTRITO 15</b>.</li>
-    <li><b>Relato</b>; tipo y subtipo se eligen del <b>desplegable</b> mientras se escribe. La prioridad viene dada.</li>
-    <li>Con la UT a la vista, se <b>irradia</b> a la frecuencia que corresponde.</li>
-  </ol>
-  <div class="ejes">
-    <div class="ej panel"><div class="u">UT 15 <span>→</span> NORTE 1</div><p>La frecuencia Norte 1 abarca una sola UT.</p></div>
-    <div class="ej panel"><div class="u">UT 14 <span>→</span> NORTE 2</div><p>Norte 2 abarca tres UT: 14, 23 y 24 bis. Una frecuencia puede tener varias UT.</p></div>
-  </div>
-  <div class="cierre panel">
-    <div>
-      <h3>La presentación completa</h3>
-      <p>Escaneá el código para volver a ver la exposición, con el mapa animado y las réplicas del SAE WEB y del RugGear.</p>
-      <code>cordobeses-en-alerta-exposicion-2.vercel.app</code>
-    </div>
-    <img src="img/qr.jpg" alt="Código QR de la presentación">
-  </div>
-  <div class="pie"><span>Policía de la Provincia de Córdoba · Ministerio de Seguridad</span><span>3 / 3</span></div>
+  <div class="pie"><span>Policía de la Provincia de Córdoba · Ministerio de Seguridad</span><span>2 / 2</span></div>
 </section>
 
 </body>

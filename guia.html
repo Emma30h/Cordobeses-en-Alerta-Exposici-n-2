@@ -162,7 +162,7 @@ summary{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transf
 
 <nav class="bar">
   <button id="prev" aria-label="Lámina anterior">←</button>
-  <span class="pos" id="pos" aria-live="polite">1 / 6</span>
+  <span class="pos" id="pos" aria-live="polite">1 / 4</span>
   <button id="next" aria-label="Lámina siguiente">→</button>
 </nav>
 <div class="toast" id="toast">Lámina siguiente</div>
@@ -183,13 +183,13 @@ const P={
 };
 const I=(k,c='ic')=>`<svg class="${c}" viewBox="0 0 24 24" aria-hidden="true">${P[k]}</svg>`;
 const radar='<div class="hero" data-a><div class="radar"><i></i><i></i><i></i><img src="media/logo_ojo.png" alt="Logo Cordobeses en Alerta"></div></div>';
-const PDF='Division de Frecuencia - Carga en el SAE WEB.pdf';
+const PDF='Division de Frecuencia - Frecuencias RugGear.pdf';
 const fr=(c,n,u)=>`<span class="f"><i style="background:var(${c})"></i><b>${n}</b><span>UT ${u}</span></span>`;
 
 /* una tarjeta por lámina, con el mismo id que la presentación.
    o: pasos que se resaltan a medida que el expositor avanza (off: en qué paso de la lámina empieza el primero) */
 const L=[
- {id:'portada',t:'División de Frecuencia',pre:radar,b:['Cómo se reparte la ciudad en <b>8 frecuencias</b> según la UT.','Cómo figuran en el <b>RugGear</b>.','Cómo se carga un hecho en el <b>SAE WEB</b> para irradiarlo a la frecuencia que corresponde.','Esta guía avanza sola junto con la exposición.']},
+ {id:'portada',t:'División de Frecuencia',pre:radar,b:['Cómo se reparte la ciudad en <b>8 frecuencias</b> según la UT.','Cómo figuran en el <b>RugGear</b> y a qué canal se irradia cada hecho.','Esta guía avanza sola junto con la exposición.']},
  {id:'frecuencias',k:'División de frecuencia',t:'La frecuencia la define la UT',cls:'fq',off:2,o:[
    `<span class="reg">Norte</span>${fr('--f1','Norte 1','15')}${fr('--f2','Norte 2','14 · 23 · 24 bis')}`,
    `<span class="reg">Este</span>${fr('--f3','Este 1','7 · 9 · 13 · 17')}${fr('--f4','Este 2','6 · 8')}`,
@@ -198,11 +198,9 @@ const L=[
    `<span class="reg">Oeste</span>${fr('--f8','Oeste','10 · 19 · 20 · 22')}`],
    tip:'En el SAE WEB la UT figura en <b>Comuna</b> como «DISTRITO».'},
  {id:'ruggear',k:'RugGear',t:'Cada frecuencia es un canal',o:['Los canales llevan la frecuencia y sus UT: <b>NORTE 1 - UT 15</b>.','Se elige el canal de la UT del hecho.','Otra UT, otro canal: <b>UT 14 → NORTE 2</b>. Se irradia con <b>Presione para hablar</b>.']},
- {id:'sae-norte1',k:'Así se carga',t:'UT 15 → NORTE 1',o:['Teléfono.','Calle y altura: el sistema geolocaliza solo.','Comuna muestra la UT: <b>DISTRITO 15</b>.','Relato; tipo y subtipo desde el desplegable.','Se irradia a <b>NORTE 1</b>.']},
- {id:'sae-norte2',k:'Así se carga',t:'UT 14 → NORTE 2',o:['Teléfono.','Calle y altura: el sistema geolocaliza solo.','Comuna muestra la UT: <b>DISTRITO 14</b>.','Relato; tipo y subtipo desde el desplegable.','Se irradia a <b>NORTE 2</b>.'],tip:'Una frecuencia puede abarcar <b>varias UT</b>.'},
  {id:'gracias',t:'¡Muchas gracias!',hide:true,pre:radar,x:()=>`<div class="big" data-a>¡Muchas<br><span>gracias!</span></div><div class="dir" data-a><small>Dirección Monitoreo</small>Cordobeses en Alerta</div><div class="pol" data-a>Policía de la Provincia de Córdoba · Ministerio de Seguridad</div><a class="descarga" data-a href="${encodeURI(PDF)}" download="${PDF}"><span class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span><span><b>Descargar el material</b><small>PDF · para guardar o compartir</small></span></a>`}
 ];
-const VER='2026-11-03c';   // misma versión que index.html
+const VER='2026-11-03d';   // misma versión que index.html
 const N=L.length, main=document.getElementById('main'), idx=document.getElementById('idx');
 let cur=0, dir=1, live=null, liveF=0, follow=true;
 idx.innerHTML=L.map((x,i)=>`<button><span>${String(i+1).padStart(2,'0')}</span>${x.t}</button>`).join('');
