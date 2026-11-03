@@ -1,0 +1,5 @@
+.env*
+.vercel
+README.md
+_privado
+print
